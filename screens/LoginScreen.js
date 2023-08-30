@@ -6,17 +6,42 @@ import {
   KeyboardAvoidingView,
   TextInput,
   Pressable,
+  ActivityIndicator,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading,setLoading] = useState(false);
   // navigate to register screen
   const navigation = useNavigation();
+  // useEffect for login
+  useEffect(() => {
+    setLoading(true);
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if (!authUser) {
+        setLoading(false);
+      }
+      if (authUser) {
+        navigation.navigate("Home");
+      }
+    });
+    return unsubscribe;
+  }, []);
+  // Login function logic
+  const login = () => { 
+    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      console.log("User Details",userCredential);
+      const user = userCredential.user;
+      console.log("User Details",user);
+    });
+  };
   return (
     <SafeAreaView
       style={{
@@ -26,7 +51,14 @@ const LoginScreen = () => {
         backgroundColor: "white",
       }}
     >
-      <KeyboardAvoidingView>
+      {loading ? (
+        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row',flex:1}}>
+          <Text style={{marginRight:10}}>Loading </Text>
+          <ActivityIndicator size="large" color={"red" }/>
+        </View>
+
+      ):(
+<KeyboardAvoidingView>
         <View
           style={{
             justifyContent: "center",
@@ -83,6 +115,7 @@ const LoginScreen = () => {
             />
           </View>
           <Pressable
+            onPress={login}
             style={{
               width: 200,
               backgroundColor: "#318CE7",
@@ -111,6 +144,9 @@ const LoginScreen = () => {
           </Pressable>
         </View>
       </KeyboardAvoidingView>
+      ) 
+      }
+      
     </SafeAreaView>
   );
 };
