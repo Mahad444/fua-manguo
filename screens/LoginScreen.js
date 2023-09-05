@@ -53,7 +53,7 @@ const LoginScreen = () => {
     >
       {loading ? (
         <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row',flex:1}}>
-          <Text style={{marginRight:10}}>Loading </Text>
+          <Text style={{marginRight:10}}>Loading.. </Text>
           <ActivityIndicator size="large" color={"red" }/>
         </View>
 
