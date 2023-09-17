@@ -2,7 +2,6 @@ import {
   StyleSheet,
   Text,
   ScrollView,
-  SafeAreaView,
   View,
   Pressable,
 } from "react-native";
