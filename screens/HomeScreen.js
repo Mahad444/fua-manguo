@@ -2,7 +2,7 @@ import {
   StyleSheet,
   Text,
   View,
-  SafeAreaView,
+
   Alert,
   Pressable,
   Image,
