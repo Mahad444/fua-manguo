@@ -47,7 +47,7 @@ const LoginScreen = () => {
       style={{
         flex: 1,
         alignItems: "center",
-        padding: 10,
+        padding: 11,
         backgroundColor: "white",
       }}
     >

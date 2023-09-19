@@ -2,7 +2,6 @@ import {
   StyleSheet,
   Text,
   View,
-
   Alert,
   Pressable,
   Image,
