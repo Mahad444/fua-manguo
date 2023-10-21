@@ -139,7 +139,7 @@ const LoginScreen = () => {
                 fontWeight: "500",
               }}
             >
-            OR Don't have an account?SignUp
+            Don't have an account?SignUp
             </Text>
           </Pressable>
         </View>
