@@ -226,7 +226,7 @@ const PickUpScreen = () => {
                 marginVertical: 6,
               }}
             >
-              extra charges might apply
+              extra charges may apply
             </Text>
           </View>
 
