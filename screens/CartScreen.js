@@ -27,7 +27,7 @@ const CartScreen = () => {
       <ScrollView style={{ marginTop: 50 }}>
         {total === 0 ? (
           <View style={{ justifyContent: "center", alignItems: "center" }}>
-            <Text style={{ marginTop: 40 }}> Your Cart is empty</Text>
+            <Text style={{ marginTop: 40 }}> Your Cart is Empty!!</Text>
           </View>
         ) : (
           <>
