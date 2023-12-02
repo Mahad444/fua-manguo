@@ -158,7 +158,7 @@ const CartScreen = () => {
                   <Text
                     style={{ fontSize: 18, fontWeight: "400", color: "gray" }}
                   >
-                    Item Total
+                    Items Total
                   </Text>
                   <Text style={{ fontSize: 18, fontWeight: "400" }}>
                     {total} Ksh
