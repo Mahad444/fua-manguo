@@ -161,7 +161,7 @@ const CartScreen = () => {
                     Items Total
                   </Text>
                   <Text style={{ fontSize: 18, fontWeight: "400" }}>
-                    {total} Ksh
+                    {total} Kenyan Shillings
                   </Text>
                 </View>
 
