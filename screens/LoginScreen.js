@@ -127,7 +127,7 @@ const LoginScreen = () => {
             }}
           >
             <Text style={{ fontSize: 18, textAlign: "center", color: "white" }}>
-              SignIn
+              Sign In
             </Text>
           </Pressable>
           <Pressable onPress={()=> navigation.navigate("Register")} style={{ marginTop: 20 }}>
@@ -139,7 +139,7 @@ const LoginScreen = () => {
                 fontWeight: "500",
               }}
             >
-            Don't have an account?SignUp
+            Don't have an account?Sign Up
             </Text>
           </Pressable>
         </View>
