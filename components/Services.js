@@ -28,7 +28,7 @@ const Services = () => {
     {
       id: "13",
       image: "https://cdn-icons-png.flaticon.com/128/995/995016.png",
-      name: "Cleaning only",
+      name: "Cleaning only!!",
     },
   ];
 
