@@ -17,7 +17,7 @@ const ProfileScreen = () => {
   return (
     <SafeAreaView style={{flex:1,alignItems:'center',justifyContent:'center'}}>
      <Pressable style={{marginVertical:10}}>
-        <Text>Welcome{user.email}</Text>
+        <Text>Welcome{user.email} to the Best Laundry</Text>
      </Pressable>
      <Pressable onPress={signOutUser}>
         <Text>Logout</Text>
