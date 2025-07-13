@@ -17,6 +17,7 @@ const ProfileScreen = () => {
   return (
     <SafeAreaView style={{flex:1,alignItems:'center',justifyContent:'center'}}>
      <Pressable style={{marginVertical:10}}>
+      {/* SINGLE VENDOR APP */}
         <Text>Kaaribu!!{user.email} to the Best Laundry app in Town!!</Text>
      </Pressable>
      <Pressable onPress={signOutUser}>
